@@ -1,26 +1,83 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad10_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="trial" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="0vi-gb-cRn">
+                                <rect key="frame" x="0.0" y="70" width="834" height="992"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza Cam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQC-7l-Jue">
+                                <rect key="frame" x="0.0" y="20" width="834" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="t1M-lx-vIn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="2DG-et-LAV">
+                                <rect key="frame" x="0.0" y="1062" width="834" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8je-0o-9j0"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Photo" id="fTi-H6-s9v" userLabel="Photo">
+                                        <connections>
+                                            <action selector="shootPhoto:" destination="BYZ-38-t0r" id="sSJ-no-ecv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="U3w-hS-lfq"/>
+                                    <barButtonItem title="Library" id="7Bd-5M-OcP" userLabel="Library">
+                                        <connections>
+                                            <action selector="photoFromLibrary:" destination="BYZ-38-t0r" id="1mp-h4-WI5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0vi-gb-cRn" firstAttribute="top" secondItem="yQC-7l-Jue" secondAttribute="bottom" id="FvW-FO-WJw"/>
+                            <constraint firstAttribute="trailing" secondItem="2DG-et-LAV" secondAttribute="trailing" id="HoQ-TT-qBd"/>
+                            <constraint firstAttribute="trailing" secondItem="yQC-7l-Jue" secondAttribute="trailing" id="LjK-cP-RYK"/>
+                            <constraint firstItem="2DG-et-LAV" firstAttribute="top" secondItem="0vi-gb-cRn" secondAttribute="bottom" id="RmS-KS-zwt"/>
+                            <constraint firstItem="0vi-gb-cRn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SxA-PV-haZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2DG-et-LAV" secondAttribute="bottom" id="a6x-kr-HFZ"/>
+                            <constraint firstItem="yQC-7l-Jue" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="f9h-50-xvp"/>
+                            <constraint firstItem="2DG-et-LAV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fo3-0d-qSd"/>
+                            <constraint firstItem="yQC-7l-Jue" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lKs-gl-knr"/>
+                            <constraint firstAttribute="trailing" secondItem="0vi-gb-cRn" secondAttribute="trailing" id="rzT-AQ-doa"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myImageView" destination="0vi-gb-cRn" id="eEZ-g9-ru7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="25" y="59.765624999999993"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pizza" width="622" height="622"/>
+    </resources>
 </document>
